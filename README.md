@@ -20,17 +20,14 @@
     
 ## NGING伪静态
 
->location / {
->
->        index index.php index.html;
->
->        if (!-e $request_filename)
->
->        {
->
->                 rewrite ^/(.+)$ /do.php?uid=$1 last;
->
->         }
+    location / {
+            index index.php index.html;
+            if (!-e $request_filename)
+            {
+                    rewrite ^/(.+)$ /do.php?uid=$1 last;
+            }
+    }
+
 
 
     优启梦官方交流群 463631294
